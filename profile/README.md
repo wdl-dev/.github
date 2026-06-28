@@ -23,10 +23,12 @@ disaster recovery.
 | --- | --- |
 | [`wdl-dev/wdl`](https://github.com/wdl-dev/wdl) | The WDL platform runtime and control plane. Start here for architecture, HA/failover, operations, compatibility, security, and deployment paths. |
 | [`wdl-dev/cli`](https://github.com/wdl-dev/cli) | The tenant CLI, published as [`@wdl-dev/cli`](https://www.npmjs.com/package/@wdl-dev/cli). Use it to initialize projects, bundle with Wrangler dry-run, deploy immutable worker versions, manage resources, and tail logs. |
+| [`wdl-dev/site`](https://github.com/wdl-dev/site) | The public [wdl.dev](https://wdl.dev/) site, served as a first-party WDL Worker and deployed through the same CLI path as tenant applications. |
+| [`wdl-dev/aws-sigv4`](https://github.com/wdl-dev/aws-sigv4) | A small zero-dependency AWS SigV4 signer for web-standard runtimes and S3-compatible object storage, published as [`@wdl-dev/aws-sigv4`](https://www.npmjs.com/package/@wdl-dev/aws-sigv4). |
 
-More first-party repositories will live here as the project opens up. The public
-WDL site at [wdl.dev](https://wdl.dev/) is a normal Worker deployed to the WDL
-hosted preview: a first-party application deployed by WDL onto WDL.
+First-party repositories live here too. The public WDL site is a normal Worker
+deployed to the WDL hosted preview: a first-party application deployed by WDL
+onto WDL.
 
 ## Start Points
 
@@ -39,9 +41,9 @@ Operators run WDL on their own infrastructure. Start with the platform
 [security model](https://github.com/wdl-dev/wdl/blob/main/docs/security.md), and
 [compatibility matrix](https://github.com/wdl-dev/wdl/blob/main/docs/compatibility.md).
 
-WDL developers work across the platform, CLI, docs, examples, and first-party
-Workers. First-party apps should deploy through the same CLI and control plane
-as ordinary tenant workloads.
+WDL developers work across the platform, CLI, support packages, docs, examples,
+and first-party Workers. First-party apps should deploy through the same CLI and
+control plane as ordinary tenant workloads.
 
 ## Dogfooding
 
@@ -61,7 +63,8 @@ trademarks or registered trademarks of Cloudflare, Inc.
 
 Docs live with each repository. Docker images are published as
 [`getwdl/wdl-workerd`](https://hub.docker.com/r/getwdl/wdl-workerd) and
-[`getwdl/wdl-rust`](https://hub.docker.com/r/getwdl/wdl-rust). Contact:
+[`getwdl/wdl-rust`](https://hub.docker.com/r/getwdl/wdl-rust). npm packages are
+published under [`@wdl-dev`](https://www.npmjs.com/org/wdl-dev). Contact:
 <hi@wdl.dev>.
 
 Unless stated otherwise, WDL projects in this organization are released under
