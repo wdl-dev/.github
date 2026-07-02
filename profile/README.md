@@ -24,11 +24,12 @@ disaster recovery.
 | [`wdl-dev/wdl`](https://github.com/wdl-dev/wdl) | The WDL platform runtime and control plane. Start here for architecture, HA/failover, operations, compatibility, security, and deployment paths. |
 | [`wdl-dev/cli`](https://github.com/wdl-dev/cli) | The tenant CLI, published as [`@wdl-dev/cli`](https://www.npmjs.com/package/@wdl-dev/cli). Use it to initialize projects, bundle with Wrangler dry-run, deploy immutable worker versions, manage resources, and tail logs. |
 | [`wdl-dev/site`](https://github.com/wdl-dev/site) | The public [wdl.dev](https://wdl.dev/) site, served as a first-party WDL Worker and deployed through the same CLI path as tenant applications. |
+| [`wdl-dev/chat`](https://github.com/wdl-dev/chat) | [chat.wdl.dev](https://chat.wdl.dev/), a reference demo WDL Worker that builds WDL Workers with an AI agent, MicroVM sandbox, throwaway namespace deploys, and preview URLs. |
 | [`wdl-dev/aws-sigv4`](https://github.com/wdl-dev/aws-sigv4) | A small zero-dependency AWS SigV4 signer for web-standard runtimes and S3-compatible object storage, published as [`@wdl-dev/aws-sigv4`](https://www.npmjs.com/package/@wdl-dev/aws-sigv4). |
 
-First-party repositories live here too. The public WDL site is a normal Worker
-deployed to the WDL hosted preview: a first-party application deployed by WDL
-onto WDL.
+First-party repositories live here too. The public WDL site and WDL Chat are
+normal Workers deployed to WDL: first-party applications deployed by WDL onto
+WDL.
 
 ## Start Points
 
@@ -48,10 +49,9 @@ control plane as ordinary tenant workloads.
 ## Dogfooding
 
 WDL is developed by running real applications on it. The public site is a
-first-party Worker on the hosted preview. WDL Chat is the larger internal
-dogfooding workload: an AI-assisted Worker development app that runs on WDL,
-generates WDL Worker code, deploys it to test namespaces, and calls the preview
-URL.
+first-party Worker on the hosted preview. WDL Chat is the larger reference demo:
+an AI-assisted Worker development app that runs on WDL, generates WDL Worker
+code, deploys it to throwaway namespaces, and calls the preview URL.
 
 ## Cloudflare
 
